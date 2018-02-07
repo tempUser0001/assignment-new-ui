@@ -156,7 +156,7 @@ export class SvgAlbum extends React.Component {
               fill="white"
               fontSize="7"
             >
-              {this.props.album.artist}
+              {this.props.album.artist.substr(0, 24)}
             </text>
           </g>
         </svg>
