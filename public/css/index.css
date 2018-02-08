@@ -348,6 +348,7 @@ svg p {
   background-position: center;
   border-radius: 10px;
   position: relative;
+  max-width: 400px;
 }
 
 .favsAlbum * {
