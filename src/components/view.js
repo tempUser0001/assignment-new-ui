@@ -41,7 +41,7 @@ class View extends React.Component {
         albums: [...result]
           .filter(item => {
             if (
-              item.artistName.toLowerCase().startsWith(value.toLowerCase()) &&
+              item.artistName.toLowerCase().includes(value.toLowerCase()) &&
               !collections.includes(item.collectionId)
             ) {
               collections.push(item.collectionId);
@@ -156,7 +156,7 @@ const mapStateToProps = state => {
   return {
     favorites: filterString
       ? albums.filter(item =>
-          item.artist.toLowerCase().startsWith(filterString.toLowerCase())
+          item.artist.toLowerCase().includes(filterString.toLowerCase())
         )
       : albums
   };
