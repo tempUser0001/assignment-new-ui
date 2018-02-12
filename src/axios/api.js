@@ -10,7 +10,7 @@ import axios from "axios";
  */
 export const searchApi = async searchString =>
   axios
-    .get(`https://itunes.apple.com/search?term=${searchString}`)
+    .get(`https://itunes.apple.com/search?term=${searchString}&limit=200`)
     .then(res => Promise.resolve(res.data.results))
     .catch(err => Promise.reject(err));
 
